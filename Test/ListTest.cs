@@ -28,11 +28,10 @@ namespace Test
             };
 
 
-            var list4 = new List<int>
-            {
-                1,
-                34
-            };
+            var list4 = new Queue<int>();
+            list4.Enqueue(1);
+            list4.Enqueue(45);
+            list4.Enqueue(122);
 
             var intType = typeof(int);
 

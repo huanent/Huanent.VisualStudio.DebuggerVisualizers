@@ -2,7 +2,6 @@
 using System.Data;
 using System.IO;
 using System.Linq;
-using System.Windows.Forms;
 
 namespace Huanent.VisualStudio.DebuggerVisualizers.List
 {
@@ -12,13 +11,19 @@ namespace Huanent.VisualStudio.DebuggerVisualizers.List
         {
             dynamic dynamicObject = target;
             var genericType = target.GetType().GenericTypeArguments.FirstOrDefault();
-            if (genericType == null) return;
-
             var dt = new DataTable(genericType.Name);
+
+            if (genericType == null)
+            {
+                base.GetData(dt, outgoingData);
+                return;
+            }
+
 
             if (genericType.IsPrimitive || genericType == typeof(string))
             {
                 dt.Columns.Add(" ");
+
                 foreach (object item in dynamicObject)
                 {
                     var row = dt.NewRow();
@@ -29,6 +34,12 @@ namespace Huanent.VisualStudio.DebuggerVisualizers.List
             else
             {
                 var types = genericType.GetProperties();
+
+                if (types.Count() == 0)
+                {
+                    base.GetData(dt, outgoingData);
+                    return;
+                }
 
                 foreach (var item in types)
                 {

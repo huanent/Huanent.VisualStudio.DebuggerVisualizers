@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web.Script.Serialization;
 using System.Windows.Forms;
+using System.Xml;
+using System.Xml.Serialization;
 
 namespace Huanent.VisualStudio.DebuggerVisualizers.List
 {
@@ -25,7 +27,23 @@ namespace Huanent.VisualStudio.DebuggerVisualizers.List
             dataGridView.DataSource = Data;
             if (Data == null || Data.Rows.Count == 0) return;
             btnSaveXml.Click += SaveXml;
-            btnSaceJson.Click += SaveJson;
+            btnSaveJson.Click += SaveJson;
+            btnCopyXml.Click += CopyXml;
+            btnCopyJson.Click += CopyJson;
+        }
+
+        private void CopyJson(object sender, EventArgs e)
+        {
+            string json = DataTableToJson(Data);
+            Clipboard.SetText(json);
+        }
+
+        private void CopyXml(object sender, EventArgs e)
+        {
+            var builder = new StringBuilder();
+            Data.WriteXml(new StringWriter(builder));
+            string xmlStr = builder.ToString();
+            Clipboard.SetText(xmlStr);
         }
 
         private void SaveJson(object sender, EventArgs e)
@@ -92,5 +110,6 @@ namespace Huanent.VisualStudio.DebuggerVisualizers.List
                 return jss.Serialize(dic);
             }
         }
+
     }
 }

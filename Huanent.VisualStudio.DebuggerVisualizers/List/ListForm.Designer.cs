@@ -31,9 +31,9 @@
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.btnSaveXml = new System.Windows.Forms.ToolStripMenuItem();
-            this.复制xml到剪切板ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnSaceJson = new System.Windows.Forms.ToolStripMenuItem();
-            this.复制json到剪切板ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnCopyXml = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnSaveJson = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnCopyJson = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -45,12 +45,12 @@
             this.dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView.Location = new System.Drawing.Point(0, 39);
+            this.dataGridView.Location = new System.Drawing.Point(0, 42);
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.ReadOnly = true;
             this.dataGridView.RowTemplate.Height = 37;
             this.dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView.Size = new System.Drawing.Size(774, 490);
+            this.dataGridView.Size = new System.Drawing.Size(774, 487);
             this.dataGridView.TabIndex = 0;
             // 
             // menuStrip1
@@ -58,38 +58,38 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnSaveXml,
-            this.复制xml到剪切板ToolStripMenuItem,
-            this.btnSaceJson,
-            this.复制json到剪切板ToolStripMenuItem});
+            this.btnCopyXml,
+            this.btnSaveJson,
+            this.btnCopyJson});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(774, 39);
+            this.menuStrip1.Size = new System.Drawing.Size(774, 42);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // btnSaveXml
             // 
             this.btnSaveXml.Name = "btnSaveXml";
-            this.btnSaveXml.Size = new System.Drawing.Size(114, 35);
+            this.btnSaveXml.Size = new System.Drawing.Size(114, 38);
             this.btnSaveXml.Text = "保存xml";
             // 
-            // 复制xml到剪切板ToolStripMenuItem
+            // btnCopyXml
             // 
-            this.复制xml到剪切板ToolStripMenuItem.Name = "复制xml到剪切板ToolStripMenuItem";
-            this.复制xml到剪切板ToolStripMenuItem.Size = new System.Drawing.Size(114, 35);
-            this.复制xml到剪切板ToolStripMenuItem.Text = "复制xml";
+            this.btnCopyXml.Name = "btnCopyXml";
+            this.btnCopyXml.Size = new System.Drawing.Size(114, 38);
+            this.btnCopyXml.Text = "复制xml";
             // 
             // btnSaceJson
             // 
-            this.btnSaceJson.Name = "btnSaceJson";
-            this.btnSaceJson.Size = new System.Drawing.Size(121, 35);
-            this.btnSaceJson.Text = "保存json";
+            this.btnSaveJson.Name = "btnSaceJson";
+            this.btnSaveJson.Size = new System.Drawing.Size(121, 38);
+            this.btnSaveJson.Text = "保存json";
             // 
-            // 复制json到剪切板ToolStripMenuItem
+            // btnCopyJson
             // 
-            this.复制json到剪切板ToolStripMenuItem.Name = "复制json到剪切板ToolStripMenuItem";
-            this.复制json到剪切板ToolStripMenuItem.Size = new System.Drawing.Size(121, 35);
-            this.复制json到剪切板ToolStripMenuItem.Text = "复制json";
+            this.btnCopyJson.Name = "btnCopyJson";
+            this.btnCopyJson.Size = new System.Drawing.Size(121, 38);
+            this.btnCopyJson.Text = "复制json";
             // 
             // ListForm
             // 
@@ -114,8 +114,8 @@
         private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem btnSaveXml;
-        private System.Windows.Forms.ToolStripMenuItem btnSaceJson;
-        private System.Windows.Forms.ToolStripMenuItem 复制xml到剪切板ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 复制json到剪切板ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem btnSaveJson;
+        private System.Windows.Forms.ToolStripMenuItem btnCopyXml;
+        private System.Windows.Forms.ToolStripMenuItem btnCopyJson;
     }
 }
